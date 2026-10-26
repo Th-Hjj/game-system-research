@@ -1,10 +1,10 @@
 # Game System Research
 
-[MIT](LICENSE) · v0.1.4
+[MIT](LICENSE) · v0.1.5
 
 **Turn a game folder and a research question into an evidence-backed explanation of how a game system works.**
 
-An Agent Skill for investigating mechanics through local files, targeted reverse engineering and, when appropriate, experiments. The result is a readable report about rules, conditions and exceptions, with technical evidence kept separately.
+An Agent Skill for investigating mechanics through local files, targeted reverse engineering and, when appropriate, experiments. The result is a readable report that explains the system as a whole before its detailed rules, conditions and exceptions, with technical evidence kept separately.
 
 **[Read the Portal case](examples/portal-traversal/report.md)** · **[Install and use](docs/usage.md)**
 
