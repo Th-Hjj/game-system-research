@@ -1,6 +1,6 @@
-# game-system-research v0.1.5
+# game-system-research v0.1.6
 
-Explain an existing game system through evidence-backed research. The report starts with the system as a whole, then explains its rules and exceptions; technical evidence stays separate.
+Understand how an existing game system works through evidence-backed research. The report explains how its parts interact in play, with key rules supporting that explanation and further details where useful. Technical evidence stays separate.
 
 Copy this folder to your agent's skills directory, open a new session and invoke:
 

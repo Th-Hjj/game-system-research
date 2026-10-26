@@ -4,7 +4,9 @@
 
 Access to evidence and tool compatibility vary by game, build and environment. Complete recovery of every system is not guaranteed. Local analysis does not mean the agent's model runs offline.
 
-The published [Portal case](../examples/portal-traversal/report.md) uses static analysis, not gameplay measurements; its fresh-context trial was partial. The v0.1.5 reporting revision still needs a fresh research run. The helper's tested environment and limitations are in [native analysis](../skills/game-system-research/references/native-analysis.md).
+The published [Portal case](../examples/portal-traversal/report.md) predates this reporting revision and uses static analysis, not gameplay measurements; its fresh-context trial was partial. The helper's tested environment and limitations are in [native analysis](../skills/game-system-research/references/native-analysis.md).
+
+The v0.1.6 revision used fresh-context report-writing trials from supplied Big Walk and Disco Elysium evidence. These checked organization, readability and unnecessary detail; they did not revalidate the game evidence or measure human reader comprehension. A fresh end-to-end research run remains outstanding.
 
 ## Check changes
 
@@ -13,4 +15,4 @@ node scripts/check-package.cjs
 node --check skills/game-system-research/scripts/rizin-export.cjs
 ```
 
-These check packaging and syntax, not research correctness. Review reports separately: the opening should explain the system as a whole, and details should clarify its rules without losing important conditions or uncertainty. A plausible explanation is not proof; successful tool execution is not a gameplay test.
+These check packaging and syntax, not research correctness. Review whether the report lets a reader explain the relationships, follow a typical situation and predict relevant changes without assembling a rule catalogue. Check that the prose is concise, essential conditions remain, and any loop or diagram is useful and supported. These are review questions, not required report headings. A plausible explanation is not proof; successful tool execution is not a gameplay test.
