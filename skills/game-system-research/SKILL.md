@@ -2,7 +2,7 @@
 name: game-system-research
 description: Investigate a game system from a game directory and research question, then explain its evidence-backed rules, conditions and important exceptions in a concise, readable report. Use for gameplay, AI, movement, interaction or physics research; keep the game directory read-only by default.
 metadata:
-  version: "0.1.4"
+  version: "0.1.5"
 ---
 
 # Game System Research
@@ -29,11 +29,13 @@ Check object differences, conditions, values, probabilities, ordering and except
 
 Evidence materials should distinguish local static support, runtime observations, public references and unconfirmed explanations. An SDK, another version or a series-wide explanation cannot replace evidence from the current game. Offline calculations are not gameplay measurements.
 
-Move to the report once the evidence explains the target system. Pursue additional investigation only for gaps that affect important rules. When repeated attempts yield no new evidence, record the obstacle and missing answer rather than filling the gap with a conventional implementation or a guess.
+Move to the report once the evidence supports both the system's overall operation and its important rules. If you can list checks and values but cannot explain how they connect, first review the evidence for the missing relationship. Pursue additional investigation only for gaps that affect this understanding, staying within the research question. When repeated attempts yield no new evidence, record the obstacle and missing answer rather than filling the gap with a conventional implementation or a guess.
 
 ## Explain the system
 
-Generally follow **an overall introduction → important rules → open questions and blockers**. Establish a coherent understanding through connected prose or a concrete situation, then explain rules in the natural order of the system's operation. Adapt headings, length and emphasis to the subject. Gather significant unresolved questions at the end without adding empty sections to satisfy a template.
+Start with **what the system is and how its main parts work together**, not a list of rules or a summary of internal checks. For a reader unfamiliar with it, describe the relevant situation, what the player or other entities do, what happens as a result, and how the main parts connect. Explain only the relationships needed for the question, using connected prose or a representative situation. Ground this overview in evidence too; do not fill gaps with assumed purposes or an unsupported story.
+
+Develop **important rules → open questions and blockers** from that overview. Explain how each group of rules qualifies or changes the behavior already introduced, rather than leaving the reader to assemble the system from isolated conditions and tables. Define unfamiliar concepts before using their parameters. Adapt headings, length and emphasis to the subject; do not require fixed sections or pad a narrow answer with a generic introduction.
 
 Give the reader a concrete understanding: state a rule, explain an outcome or clarify where it applies. Do not substitute phrases such as “additional handling” or “the situation differs” for an explanation. Judge concision by readability; retain meaningful conditions, values and exceptions, using examples or small tables when helpful.
 
@@ -43,6 +45,6 @@ Save the report as `report.md` in the case directory by default. Use `evidence.m
 
 ## Decide whether the work is complete
 
-Judge completion by supported rules, navigable structure, concise and fluent language, and whether readers can accurately understand the target system without reading code. Typical situations or user feedback can expose explanatory gaps. Do not measure delivery by functions located, algorithms recovered or whether readers could design their own system.
+Judge completion by supported rules, navigable structure, concise and fluent language, and whether readers can accurately understand the target system without reading code. As an editorial check, read only the opening: could a reader unfamiliar with the system explain its basic operation and how its main parts relate? Then check whether the detailed rules refine that understanding. A catalogue of correct facts alone is not sufficient. Typical situations or user feedback can expose explanatory gaps. Do not measure delivery by functions located, algorithms recovered or whether readers could design their own system.
 
 Record format checks, tool execution, research conclusions and actual reader understanding separately; none substitutes for another. Present the report or briefly describe changes as requested, retaining detailed validation records in the supporting materials.
