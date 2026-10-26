@@ -1,4 +1,4 @@
-# game-system-research v0.1.4
+# game-system-research v0.1.5
 
 An Agent Skill that turns a game directory and a focused question into a readable, evidence-backed system report.
 
@@ -11,7 +11,7 @@ Question: <the system or behavior you want to understand>
 Keep the installation read-only and write the report in this workspace.
 ```
 
-The Skill instructions and project documentation are maintained in English. The agent chooses a research route from the files it finds. Reports generally establish the overall system, explain important rules and finish with significant open questions.
+The Skill instructions and project documentation are maintained in English. The agent chooses a research route from the files it finds. Reports first explain what happens and how the system's main parts connect, then develop its important rules and significant open questions. A list of conditions or an internal-check summary is not a substitute for that overview.
 
 `SKILL.md` contains the methodology. `references/native-analysis.md` is read only when native-code analysis is useful. `scripts/rizin-export.cjs` is an optional selected-function export helper requiring Node.js and a compatible Rizin/rz-ghidra installation; it does not find functions or install tools.
 
