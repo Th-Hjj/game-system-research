@@ -17,7 +17,7 @@ Question: How do enemies decide whether to keep attacking, stagger or flee after
 Keep the game folder read-only. Save the research in this workspace.
 ```
 
-You get a system report, a traceable evidence index and clearly identified open questions. No engine name, function address or tool choice is required up front.
+You get a system report, a traceable evidence index and clearly identified open questions.
 
 ## Built around a real investigation
 
