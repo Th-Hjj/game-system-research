@@ -1,0 +1,21 @@
+# Keep game samples, generated analysis and third-party tools local.
+input/
+artifacts/
+databases/
+cache/
+tools/
+node_modules/
+__pycache__/
+*.pyc
+*.dll
+*.exe
+*.so
+*.dylib
+*.vpk
+*.pdb
+*.zip
+*.7z
+.env
+.env.*
+.DS_Store
+Thumbs.db
