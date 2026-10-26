@@ -2,33 +2,20 @@
 
 [MIT](LICENSE) · v0.1.5
 
-**Turn a game folder and a research question into an evidence-backed explanation of how a game system works.**
+**Understand how an existing game system works—from evidence, not guesswork.**
 
-An Agent Skill for investigating mechanics through local files, targeted reverse engineering and, when appropriate, experiments. The result is a readable report that explains the system as a whole before its detailed rules, conditions and exceptions, with technical evidence kept separately.
+Give the agent a game and a question. It investigates relevant files and explains the system as a whole, then its rules, conditions and exceptions. Technical evidence stays separate from the readable report.
 
-**[Read the Portal case](examples/portal-traversal/report.md)** · **[Install and use](docs/usage.md)**
+## Use
 
-## Input → output
+[Install the Skill](docs/usage.md), then start a new session:
 
 ```text
 $game-system-research
-Game folder: <path to your installed game>
-Question: How do enemies decide whether to keep attacking, stagger or flee after being hit?
-Keep the game folder read-only. Save the research in this workspace.
+Game: <title or installation folder>
+Question: How does this system work?
 ```
 
-You get a system report, a traceable evidence index and clearly identified open questions.
+The agent chooses tools as needed and keeps the game directory read-only by default. Outputs are `report.md` and `evidence.md`, with unresolved questions stated explicitly. This is system research, not an implementation tutorial or advice for designing your own game.
 
-## Built around a real investigation
-
-The first case examines **Portal**: crossing detection, position and orientation, velocity, and objects spanning both sides. One finding: an upward exit can impose a vertical-speed minimum, but a later total-speed cap can reduce that component again.
-
-The case informed a reusable research method and a small, optional Rizin export helper. The research was static; gameplay experiments and broader game coverage remain open. [Evidence](examples/portal-traversal/evidence.md) · [Validation](docs/validation.md)
-
-## Explore
-
-- [Method and development process](docs/method.md)
-- [Skill instructions](skills/game-system-research/SKILL.md)
-- [Contribute a case or improvement](CONTRIBUTING.md)
-
-Developed iteratively with Codex. Original project materials are MIT-licensed; game files, raw decompiler output and third-party tool binaries are not included.
+[Portal example](examples/portal-traversal/report.md) · [Skill instructions](skills/game-system-research/SKILL.md) · [Method](docs/method.md) · [Scope and checks](docs/validation.md) · [Contributing](CONTRIBUTING.md)
