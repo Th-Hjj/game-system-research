@@ -1,51 +1,36 @@
 # Install and use
 
-## Install the Skill
+## Install
 
-Clone or download this repository. Copy `skills/game-system-research` into your agent's skills directory, keeping the folder name intact. For Codex, use the user-level `~/.agents/skills/` directory, or a project's `.agents/skills/` directory.
+Clone or download the repository. Copy `skills/game-system-research` into your agent's skills directory. For Codex, use `~/.agents/skills/game-system-research`.
 
-On Windows, from this repository:
+On Windows, run from the repository:
 
 ```powershell
 $destination = Join-Path $env:USERPROFILE '.agents/skills/game-system-research'
-if (Test-Path -LiteralPath $destination) { throw 'An installation already exists; review it before replacing it.' }
+if (Test-Path -LiteralPath $destination) { throw 'Review the existing installation before replacing it.' }
 New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
 Copy-Item -LiteralPath 'skills/game-system-research' -Destination $destination -Recurse
 ```
 
-Open a new local Codex session in a separate research workspace and invoke `$game-system-research`. The Skill and project documentation are maintained in English. Other Agent Skills-compatible hosts may require different installation paths and have not been tested here.
+To update, review local changes before replacing the installed copy. Updating the repository alone does not update a separately copied installation.
 
-If the Skill does not appear, restart the host or explicitly ask it to read the installed `SKILL.md`. Explicit file loading does not test automatic discovery. [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills)
+## Use
 
-## Ask a focused question
+Open a new session in a separate research workspace:
 
 ```text
 $game-system-research
-Game folder: <absolute path to your installed game>
-Research how enemies choose between continuing an attack, staggering and fleeing after being hit.
-Explain the rules and important exceptions in English.
-Keep the installation read-only; write all analysis in the current workspace.
+Game: <title or installation folder>
+Question: <the system you want to understand>
 ```
 
-The agent chooses an approach from the files it finds. It should produce `report.md` for the system explanation and `evidence.md` for the supporting research. Starting the game may write configuration or saves, so runtime work needs an appropriate isolated setup.
+The agent can locate the game from installation manifests; provide its path if needed. No engine name or tool plan is required.
+
+Results are saved as `report.md` and `evidence.md`. The game directory stays read-only by default; runtime experiments need suitable authorization and isolation because launching the game can write saves or configuration.
+
+If the Skill is not discovered, restart the agent or ask it to read the installed `SKILL.md`. Explicit loading is a fallback, not proof of automatic discovery. Other compatible agents may use different installation paths.
 
 ## Optional native-code helper
 
-The Skill itself has no fixed engine or mandatory reverse-engineering tool. The bundled helper requires Node.js and an existing Cutter-style Rizin distribution with rz-ghidra and compiled Sleigh data. No third-party Node packages are needed.
-
-```text
-node skills/game-system-research/scripts/rizin-export.cjs --help
-node skills/game-system-research/scripts/rizin-export.cjs --check <tool-root>
-node skills/game-system-research/scripts/rizin-export.cjs <tool-root> <binary-copy> <new-output-dir> <verified-0xVA>
-```
-
-The helper exports only the function entries you supply. It does not discover them, install tools, execute the game or prove that generated pseudocode is correct. It preserves diagnostics and input hashes, and rejects an output directory containing files. See the [native-analysis reference](../skills/game-system-research/references/native-analysis.md) for supported layout and limitations.
-
-## Check this repository
-
-```text
-node scripts/check-package.cjs
-node --check skills/game-system-research/scripts/rizin-export.cjs
-```
-
-The package check validates required files, local Markdown references, Skill identity and publication hygiene. It is not a gameplay test or a decompiler test.
+The bundled helper needs Node.js and a compatible Rizin/rz-ghidra setup. It exports selected functions; it does not locate them or install tools. See [native analysis](../skills/game-system-research/references/native-analysis.md) for usage and dependencies.
