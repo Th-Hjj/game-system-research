@@ -18,4 +18,4 @@ Question: How does this system work?
 
 The agent chooses tools as needed and keeps the game directory read-only by default. Outputs are `report.md` and `evidence.md`, with unresolved questions stated explicitly. This is system research, not an implementation tutorial or advice for designing your own game.
 
-[Portal example](examples/portal-traversal/report.md) · [Skill instructions](skills/game-system-research/SKILL.md) · [Method](docs/method.md) · [Scope and checks](docs/validation.md) · [Contributing](CONTRIBUTING.md)
+[Skill instructions](skills/game-system-research/SKILL.md) · [Method](docs/method.md) · [Scope and checks](docs/validation.md) · [Contributing](CONTRIBUTING.md)

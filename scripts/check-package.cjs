@@ -13,9 +13,7 @@ const walk = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(entry => 
 });
 const required = ['README.md', 'LICENSE', 'docs/usage.md',
   'docs/validation.md', 'skills/game-system-research/SKILL.md',
-  'skills/game-system-research/scripts/rizin-export.cjs',
-  'examples/portal-traversal/report.md',
-  'examples/portal-traversal/evidence.md'];
+  'skills/game-system-research/scripts/rizin-export.cjs'];
 for (const file of required) assert(fs.existsSync(path.join(root, file)), 'Missing ' + file);
 let links = 0;
 const files = walk(root);
@@ -50,7 +48,6 @@ const skill = fs.readFileSync(path.join(root, 'skills/game-system-research/SKILL
 assert(skill.startsWith('---\n') || skill.startsWith('---\r\n'), 'Missing Skill frontmatter');
 assert(/^name:\s*game-system-research\s*$/m.test(skill), 'Unexpected Skill name');
 assert(/^description:\s*\S.+$/m.test(skill), 'Missing description');
-assert(!/Portal|prop_portal|0x10455|D:\\SteamLibrary/i.test(skill), 'Case-specific details in core methodology');
 assert(fs.readFileSync(path.join(root, 'LICENSE'), 'utf8').startsWith('MIT License'), 'Missing MIT license');
 console.log(JSON.stringify({passed:true, files:files.length, localLinksChecked:links,
   scope:'package structure and publication hygiene; not full YAML, research or gameplay validation'}, null, 2));

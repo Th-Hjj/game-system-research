@@ -4,7 +4,7 @@
 
 Access to evidence and tool compatibility vary by game, build and environment. Complete recovery of every system is not guaranteed. Local analysis does not mean the agent's model runs offline.
 
-The published [Portal case](../examples/portal-traversal/report.md) predates this reporting revision and uses static analysis, not gameplay measurements; its fresh-context trial was partial. The helper's tested environment and limitations are in [native analysis](../skills/game-system-research/references/native-analysis.md).
+The helper's tested environment and limitations are in [native analysis](../skills/game-system-research/references/native-analysis.md).
 
 The v0.1.6 revision used fresh-context report-writing trials from supplied Big Walk and Disco Elysium evidence. These checked organization, readability and unnecessary detail; they did not revalidate the game evidence or measure human reader comprehension. A fresh end-to-end research run remains outstanding.
 
