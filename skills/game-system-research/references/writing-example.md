@@ -1,6 +1,6 @@
-# Selecting and connecting facts
+# Developing a connected explanation
 
-This fictional example illustrates editorial choices, not researched game facts or a required report structure.
+This fictional excerpt illustrates how to develop relationships between rules. It is not researched game evidence, a complete system report, a target length or a required structure. A broader system needs further explanation at the depth its question requires.
 
 ## Hypothetical system: Cave Salvage
 
@@ -16,4 +16,4 @@ Opening a shortcut changes that calculation. Reaching it costs oil now, but its 
 
 ## Editorial choice
 
-The passage answers successive questions: what the player does, why collecting treasure complicates the return, and how exploration changes later attempts. Each rule supports that explanation. Exact costs belong here if needed to answer the research question; details such as how shortcut states are stored remain in the evidence.
+The passage develops a relationship across paragraphs: carrying treasure changes the cost of returning, that changes the next collection decision, and persistent shortcuts alter this trade-off on later attempts. Simply saying "oil creates risk and shortcuts create progression" would name those relationships without explaining them. Keep this development throughout the main body of a full report. Exact costs belong there if needed to answer the research question; details such as how shortcut states are stored remain in the evidence.
