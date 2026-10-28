@@ -1,10 +1,10 @@
 # Game System Research
 
-[MIT](LICENSE) · v0.1.6
+[MIT](LICENSE) · v0.1.7
 
 **Understand how an existing game system works—from evidence, not guesswork.**
 
-Give the agent a game and a question. It investigates relevant evidence and explains how the system's parts work together in play, including relevant player choices and consequences. Key rules support that explanation; further details and exceptions follow where useful. Technical evidence stays separate from the readable report.
+Give the agent a game and a question. It researches the system and writes a clear, engaging explanation for developers who have never played the game: what players do, and how key rules combine to create choices, constraints and changes in play. Gaps in this basic understanding guide the research. The report selects what the reader needs; technical evidence and further detail stay separate.
 
 ## Use
 

@@ -1,9 +1,9 @@
 # Research method
 
-Start with the game and the question, not a preferred engine or tool. Inspect relevant files, choose a focused route and trace findings to the conditions under which they affect play.
+Start with the game and the question. Sketch an ordinary interaction from the player's goal through action to consequence. Identify actions, objects or state changes that still need explanation or evidence; investigate these gaps before peripheral details. Choose tools and evidence channels to answer those questions.
 
-Build a connected explanation: how the parts affect one another, what players can perceive or influence, and how actions change subsequent possibilities. Make this the report's main body, with key rules supporting it and further detail where useful. Use a game loop or small system diagram only when it helps explain supported relationships.
+Write for developers who have never played the game. Build the explanation in the order they need to understand what players do and how key rules work together to create choices, constraints and changes in play. Use a game loop or small system diagram only when it clarifies supported relationships.
 
-Keep the report concise and readable, with no mandatory analytical template. Ground explanations and rules in evidence; distinguish supported consequences from claims about actual player experience or developer intent. Keep technical material outside the main report.
+Verify evidence rigorously, then select report detail for understanding. Include conditions and exceptions whose omission would materially mislead; retain other findings in the evidence. Keep the article concise and readable, without a mandatory template. Distinguish supported consequences from claims about actual player experience or developer intent.
 
 The [Skill instructions](../skills/game-system-research/SKILL.md) define the workflow. [Scope and checks](validation.md) describe its limitations.

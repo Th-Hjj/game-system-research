@@ -1,6 +1,6 @@
-# game-system-research v0.1.6
+# game-system-research v0.1.7
 
-Understand how an existing game system works through evidence-backed research. The report explains how its parts interact in play, with key rules supporting that explanation and further details where useful. Technical evidence stays separate.
+Understand an existing game system through evidence-backed research. The report is written for developers unfamiliar with the game: picture what players do and understand how key rules combine to create choices, constraints and changes in play. Basic understanding guides the research and the article's structure; technical evidence stays separate.
 
 Copy this folder to your agent's skills directory, open a new session and invoke:
 
