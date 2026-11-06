@@ -2,6 +2,9 @@
 
 [MIT](LICENSE) · v0.1.8
 
+有些大模型天天就知道偷懒，问他一个问题，他连游戏代码都不看就开始瞎编。这个skill能确保当你提出需要研究游戏内机制/系统相关的问题时，agent会认真的去研究游戏代码。
+注：也可以用于“当你已经完全看不懂ai写了什么代码”的情况
+
 **Understand how an existing game system works—from evidence, not guesswork.**
 
 Give the agent a game and a question. It researches the system and writes a clear explanation for developers who have never played the game: what players do, and how key rules combine to create choices, constraints and changes in play. Technical evidence stays separate.
