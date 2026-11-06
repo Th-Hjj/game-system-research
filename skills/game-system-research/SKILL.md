@@ -8,7 +8,7 @@ description: >-
   Ground answers in available implementation evidence and explain at the requested
   scope. Not for pure ideation or general programming questions.
 metadata:
-  version: "0.1.9"
+  version: "0.2.0"
 ---
 
 # Game System Research
@@ -25,9 +25,11 @@ Identify the behaviors and situations the user wants to understand and the archi
 
 Keep investigation read-only by default; implementation changes follow the user's task. Put extracted samples, tools and logs outside the game files, and use the task's workspace for any requested reports. Launching a game may write configuration or saves, so runtime experiments must fit existing authorization and isolation arrangements. Do not expand a focused question into reverse engineering the entire game.
 
+Work from local files. Do not connect to online services, bypass anti-cheat, DRM or encryption you were not given access to, or attach to a running online client. Quote only the code and data needed as evidence. When an answer depends on server-side logic or content you cannot access this way, state that part as unverified.
+
 Choose the shortest useful route for the files and question. When readable source is available, start there: follow the relevant active entry through the code and data actually used to the behavior being explained. Check scene or prefab bindings and configuration overrides where they could change the answer; finding an unused implementation or a default value is not enough.
 
-For other game files, confirm where scripts or configuration are actually used; check runtime data sources for managed code; inspect resource indexes before extracting selected items; narrow native modules through logs, types or attributed signatures before examining local implementation. Read the [native-analysis reference](references/native-analysis.md) when that route is useful, without making its tools mandatory for every game.
+For other game files, confirm where scripts or configuration are actually used; check runtime data sources for managed code; inspect resource indexes before extracting selected items; narrow native modules through logs, types or attributed signatures before examining local implementation. Read the [managed-and-asset reference](references/managed-and-asset-analysis.md) for managed assemblies, engine archives and scripted engines, and the [native-analysis reference](references/native-analysis.md) when native code must be examined, without making their tools mandatory for every game.
 
 Prefer existing tools. When one is missing, verify its official source and dependencies, then check that it can parse a relevant sample. If a tool or candidate entry fails, change course based on the failure. When a key behavior depends on runtime state, design a small experiment that distinguishes competing explanations.
 
@@ -47,17 +49,13 @@ For a focused question, answer directly with the supported behavior, its cause, 
 
 ### Full system explanations
 
-For broad system questions or requested reports, write for developers unfamiliar with the game and apply the following guidance.
+For broad system questions or requested reports, write for developers unfamiliar with the game.
 
-**Make a fully developed explanation of the system the main body, not a brief overview followed by a mechanism catalogue.** Establish what the player is trying to do and how ordinary play works, then progressively explain how the main parts operate together. Introduce unfamiliar objects and key rules within this account. Let the reader's emerging questions determine what comes next, rather than following evidence headings or giving every finding its own section.
+**Make a fully developed explanation of the system the main body, not a brief overview followed by a mechanism catalogue.** Start with what the player is trying to do and how ordinary play works, then explain how the main parts operate together, introducing unfamiliar objects and key rules where the reader needs them. Let the reader's emerging questions, not evidence headings, decide the order.
 
-Develop important relationships rather than merely naming them: explain why a player might choose one action over another, how interacting rules produce the result, and how that result changes subsequent decisions. Follow concrete situations far enough to make these connections understandable. Where central to the question, explain how play continues when an opportunity fails or conditions change, and how preparation, resources or progression reshape later interactions. These are ways to deepen the account, not mandatory categories. One successful sequence or a sentence of "gameplay significance" after each mechanism does not explain the whole system.
+Develop relationships rather than naming them: why a player would choose one action over another, how interacting rules produce the result, and how that result changes later decisions. Follow concrete situations far enough to show this. Where central to the question, cover what happens when an opportunity fails or conditions change, and what carries into later play. One successful sequence, or a sentence of "gameplay significance" after each mechanism, does not explain a system. A diagram, table or loop can support the explanation but cannot replace it, and none is required.
 
-Give the central explanation the space warranted by the question's breadth and complexity. **Concise means free of repetition and irrelevant digressions, not as short as possible.** Develop necessary reasoning before trimming; do not compress it into a synopsis to preserve room for peripheral rules. More words alone do not add depth. Use headings and examples to sustain a flowing article in everyday game language, without a fixed template, length quota or required overview section.
-
-Use systems thinking as a reasoning aid, not required report terminology. Where a meaningful game loop exists, explain what carries into the next interaction; describe feedback only when a result affects an earlier condition. A small system diagram or compact table can clarify supported relationships, but cannot replace their explanation. Neither loops nor diagrams are required.
-
-Check the connected draft against the evidence, preserving rules, values and exceptions whose omission would materially misrepresent it. Keep other findings in the evidence; a player-visible effect alone does not earn a paragraph. Establish typical behavior before necessary qualifications. Remove repetition, incidental corrections and research commentary, not the reasoning that connects the parts. Read the [writing excerpt](references/writing-example.md) for an illustration of developing a relationship, not a target report length or a complete report template.
+**Concise means free of repetition and irrelevant digressions, not as short as possible.** Give the central explanation the space the question needs; move peripheral findings to the evidence instead of compressing the reasoning that connects the parts. Preserve rules, values and exceptions whose omission would misrepresent the system, and establish typical behavior before qualifications. Use everyday game language without a fixed template. The [writing excerpt](references/writing-example.md) illustrates developing one relationship; it is not a length target or a template.
 
 ### Sources and deliverables
 
@@ -67,10 +65,8 @@ Answer focused questions in the conversation by default. When the task calls for
 
 ## Decide whether the work is complete
 
-Check that the actual question is answered, the decisive conditions and causal links are supported, and any important limits are clear. A focused answer is complete when the reader can understand the asked-about behavior without guessing a missing step; it does not require an explanation of the whole game.
+Check that the actual question is answered, its decisive conditions and causal links are supported, and important limits are clear. A focused answer is complete when the reader can follow the asked-about behavior without guessing a step; it need not explain the whole game.
 
-For a full system explanation, review the whole article as a developer unfamiliar with the game and without consulting the evidence. Does sustained system explanation carry the main body, or does it give way to compressed mechanism entries after the introduction? Check that the relationships central to the requested scope receive enough development to understand, not just a mention. A longer opening, mechanism coverage, a diagram or one ideal sequence cannot substitute for this.
+For a full system explanation, reread the report as a developer unfamiliar with the game, without consulting the evidence. Using only what it says, reconstruct how ordinary play unfolds, why a meaningful alternative changes it, and what carries forward. If the reader must assemble isolated rules or guess a key transition, expand and connect the explanation before cutting length; padding or unsupported interpretation is not a repair. Then check evidence, conditions, clarity and repetition.
 
-For that review, use only what the explanation actually says to reconstruct how ordinary play unfolds, why a meaningful alternative would change it, and what consequences carry forward where relevant. Identify the passages that support this account; do not supply missing links from prior game knowledge. If the reader must assemble isolated rules or guess how a key transition works, expand and connect the explanation before cutting length. Then check evidence, necessary conditions, clarity and repetition. Adding unsupported interpretation or padding is not a repair.
-
-Keep these checks internal, not as answer headings or a checklist. Do not measure success by word count, number of mechanisms covered or whether readers could design their own system. Distinguish format checks, tool execution, research conclusions and actual reader understanding; internal review is not a reader test. Present the answer or report as requested, retaining detailed validation records with supporting materials when used.
+Keep these checks internal, not as headings or a checklist. Success is reader understanding, not word count or the number of mechanisms covered; an internal review is not a reader test.

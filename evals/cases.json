@@ -1,0 +1,10 @@
+[
+  {
+    "id": "portal-speed-conditions",
+    "kind": "full-system-report",
+    "source": "Portal, Codex session 01a176fd-4737-7b02-adac-423e8a1903a7 (lines 358, 751, 900, 913, 987, 1046); project notes research/portal-traversal/notes/speed-review.md and validation/readability-review.md",
+    "fixture": "fixtures/portal-speed",
+    "prompt": "研究 Portal 里物体穿过传送门之后的速度是怎么处理的，写成给没玩过这个游戏的开发者看的报告，保存为 report.md 和 evidence.md。尤其是你发现的速度上下限，请核实具体触发条件，以及分别适用于玩家还是其他物体，不要把局部处理概括成所有穿越情况的规则。",
+    "context": "当前环境没有游戏文件，也不能启动游戏；已经静态核查过的结果在 evidence-notes.md。上一版报告的用户反馈：“当前研究成果有价值，但最终输出过于偏向代码实现与逆向技术。”"
+  }
+]
