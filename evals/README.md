@@ -31,9 +31,9 @@ It needs only Node.js and runs on Linux and macOS. A stub stands in for Rizin an
 2. A non-player object that qualifies for teleporting goes through the same exit with the entry portal also facing upward. What happens?
 3. The same object goes through with the entry portal horizontal. What happens, and why?
 4. What changes if the exit portal is on a wall?
-5. Can someone leave an upward-facing exit with less than 300 upward speed? When, and why?
+5. Can a player leave an upward-facing exit with less than 300 upward speed? When, and why?
 
-**Key.** 1: 300. 2: 225. 3: stays at 100, because that branch's floor is 50 and 100 is already above it. 4: the upward top-up does not apply. 5: yes, for example with large horizontal speed, because the 1000 total-speed cap is applied after the upward component is topped up.
+**Key.** 1: 300. 2: 225. 3: stays at 100, because that branch's floor is 50 and 100 is already above it. 4: the upward top-up does not apply. 5: yes, when horizontal speed is large, because the 1000 total-speed cap is applied after the upward component is topped up. A report may correctly add that how the cap reduces speed was not recorded.
 
 | Pass | Fail |
 | --- | --- |
