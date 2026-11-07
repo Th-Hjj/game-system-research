@@ -2,6 +2,14 @@
 
 [MIT](LICENSE) · v0.2.0
 
+## Install / 安装
+
+```bash
+npx skills add Th-Hjj/game-system-research
+```
+
+Add `-g` to install globally. / 加上 `-g` 可安装到用户级。
+
 有些大模型天天就知道偷懒，问他一个问题，他连游戏代码都不看就开始瞎编。这个skill能确保当你提出需要研究游戏内机制/系统相关的问题时，agent会认真的去研究游戏代码。
 注：也可以用于“当你已经完全看不懂ai写了什么代码”的情况
 
@@ -11,7 +19,7 @@ Ask about an existing game or the project already open in your workspace, includ
 
 Focused questions get a direct answer with important conditions and source locations. Broader research develops a connected explanation for developers unfamiliar with the game: what players do, and how key rules combine to create choices, constraints and changes in play. Detailed technical evidence stays separate.
 
-## Install
+## Manual installation
 
 Copy `skills/game-system-research` into your agent's skills directory (for Codex: `~/.agents/skills/game-system-research`).
 
